@@ -6,14 +6,21 @@ let obj2={
     age:5,
     name:"Person 1"
 }
+let compare=true;
 
-let a=Object.entries(obj1);
-console.log(a);
-let b=Object.entries(obj2);
-console.log(b);
-let c=a[0];
-let d=b[1];
-console.log(typeof(c));
-console.log(typeof(d));
-console.log(c===d);
-// console.log(JSON.stringify(obj1)==JSON.stringify(obj2))
+if(Object.keys(obj1).length==Object.keys(obj2).length){
+    for(key in obj1) { 
+        if(obj1[key] == obj2[key]) {
+        // console.log(obj1[key])
+        // console.log(obj2[key])
+        }
+        else {
+            compare=false;
+            
+        }
+    }
+}
+else {
+    compare=false;
+}
+console.log(compare);
